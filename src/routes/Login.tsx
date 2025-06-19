@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useFetch, ApiUrl, transformZodError } from '../utils';
 import type { errorResponse, suceessResponse, ZodError } from '../types';
-import { Navigate, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginSuccess, setLoginSuccess] = useState(false);
-
   const { error, loading, refetch } = useFetch({
     url: `${ApiUrl}/login`,
     method: 'POST',
@@ -19,18 +18,13 @@ const Login: React.FC = () => {
 
     const response: suceessResponse | errorResponse = await refetch({ email, password }) as suceessResponse | errorResponse;
     if(response && 'message' in response) {
-      setLoginSuccess(true);
-    }else{
-        setLoginSuccess(false);
+      navigate("/")
     }
 };
-
   return (
     <div className="flex justify-center items-center w-screen h-screen">
       <form onSubmit={handleLogin} className='p-3 flex flex-col justify-center shadow-2xl shadow-black'>
-        <h1 className='text-2xl text-center m-3'>Login</h1>
-        {loginSuccess && <Navigate to="/"/>}
-        
+        <h1 className='text-2xl text-center m-3'>Login</h1> 
           <input
             className='outline-0 p-2 m-3 border-b-1 border-b-white/30'
             type="email"

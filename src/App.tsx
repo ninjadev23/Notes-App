@@ -1,12 +1,6 @@
-import Home from './Components/Home'
-import Login from './Components/Login'
-import Signup from './Components/Signup'
-import NoteComponent from './Components/NoteComponent'
-import NotFound from './Components/NotFound'
-import { Route, Routes, NavLink } from 'react-router-dom'
-import { NoteListBar } from './Components/NoteListBar'
-import Logout from './Components/Logout'
-import CreateNote from './Components/CreateNote'
+import Routes from './Routes'
+import { NavLink } from 'react-router-dom'
+import { NoteListBar } from './components/NoteListBar'
 function App() {
   return (
     <>
@@ -25,20 +19,8 @@ function App() {
     <div>
       <NoteListBar />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/notes/:id" element={<NoteComponent />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="/createnote" element={<CreateNote />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Routes/>
       </main>
-    <footer className='border-t flex items-center py-10 mt-10 flex-col'>
-        <p>Web Created By Jansel Roa 🔥</p>
-        <a href="https://github.com/ninjadev23/Notes-App" target="_blank" rel="noopener noreferrer" className='text-sky-500'>Repo Of Code</a>
-    </footer>
     </div>
     </>
   )

@@ -1,7 +1,7 @@
 import { useFetch, ApiUrl, isNote } from "../utils";
 import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import Loading from "./Loading";
+import Loading from "../components/Loading";
 export default function CreateNote() {
   const { data, error, loading, refetch } = useFetch({
     url: ApiUrl + "/notes",

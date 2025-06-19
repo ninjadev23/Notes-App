@@ -1,7 +1,7 @@
 import { useFetch, ApiUrl } from "../utils"
 import { Navigate } from "react-router-dom"
 import { isSuceessResponse } from "../utils"
-import Loading from "./Loading"
+import Loading from "../components/Loading"
 export default function Logout (){
     const {data, loading, error} = useFetch({
         url: `${ApiUrl}/logout`,
