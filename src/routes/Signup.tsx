@@ -27,7 +27,7 @@ const Signup: React.FC = () => {
 };
 
   return (
-    <div className="flex justify-center items-center w-screen h-screen">
+    <div className="flex justify-center items-center h-screen">
       <form onSubmit={handleSignup} className='p-3 flex flex-col justify-center shadow-2xl shadow-black'>
         <h1 className='text-2xl text-center m-3'>Signup</h1>
         {SignupSuccess && <Navigate to="/login"/>}

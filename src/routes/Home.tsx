@@ -58,7 +58,7 @@ export default function Home() {
           <h1 className="text-2xl m-3 text-center text-white/70">
             Welcome, Capture your new ideas, so you don't forget them.
           </h1>
-          <div className="flex w-full justify-center items-center pb-6">
+          <div className="flex flex-wrap w-full justify-center items-center pb-6">
             <input
               type="search"
               value={search}
