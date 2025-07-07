@@ -48,7 +48,7 @@ export default function Home() {
       setTagSelectStyle([...tagsSelectStyle, index]);
     else setTagSelectStyle(tagsSelectStyle.filter((n) => n !== index));
   };
-  if (error === "User Not Authenticated") return <Navigate to="/signup" />;
+  if (error === "User Not Authenticated") return <Navigate to="/home" />;
   if (error) return <p className="error-message">{error as string}</p>;
   if (loading) return <Loading />;
   return (

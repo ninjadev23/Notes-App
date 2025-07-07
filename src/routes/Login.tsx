@@ -18,7 +18,7 @@ const Login: React.FC = () => {
 
     const response: suceessResponse | errorResponse = await refetch({ email, password }) as suceessResponse | errorResponse;
     if(response && 'message' in response) {
-      navigate("/")
+      navigate("/home")
     }
 };
   return (

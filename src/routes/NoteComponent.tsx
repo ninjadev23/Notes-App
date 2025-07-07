@@ -151,7 +151,7 @@ const NoteComponent: React.FC = () => {
             className="bg-black/30 p-4 resize-none outline-0 w-[80%] rounded-bl-lg rounded-br-lg"
             onChange={(e) => handleInput("content", e.target.value)}
           />
-          {deleted && <Navigate to="/" />}
+          {deleted && <Navigate to="/home" />}
           <div className="flex gap-2 m-2">
             {note.tags.map((tag, i) => (
               <div
