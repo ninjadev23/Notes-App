@@ -4,13 +4,13 @@ A SPA built with TypeScript, ReactJS, and TailwindCSS. It implements hooks, API 
 implements the API: https://github.com/ninjadev23/API-NOTES
 
 
-![alt text](/frontend/public/example1.png)
+![alt text](/public/example1.png)
 
 
-![alt text](/frontend/public/example2.png)
+![alt text](/public/example2.png)
 
 
-![alt text](/frontend/public/example3.png)
+![alt text](/public/example3.png)
 ## Run
 
 ```
